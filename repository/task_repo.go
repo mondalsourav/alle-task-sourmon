@@ -5,6 +5,7 @@ import (
 	"gorm.io/gorm"
 )
 
+// Task repository interface
 type TaskRepositoryInf interface {
 	CreateTask(task *models.Task) error
 	GetTasks(status string, limit, offset int) ([]models.Task, error)

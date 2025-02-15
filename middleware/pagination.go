@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// Pagination middleware function
 func Pagination() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		page, _ := strconv.Atoi(c.DefaultQuery("page", "1"))
